@@ -59,7 +59,7 @@ document.querySelector('#mute').addEventListener('#click', function() {
 		video.muted = false;
 		document.querySelector('#mute').innerHTML = 'Mute';
 	}
-});
+})
 
 document.querySelector('#slider').addEventListener("click", function() {
 	console.log("Changed Volume");
@@ -67,16 +67,16 @@ document.querySelector('#slider').addEventListener("click", function() {
 	video.volume = newVol
 	console.log(newVol);
 	document.querySelector('#volume').innerHTML = newVol * 100 + '%'
-});
+})
 
 document.querySelector('#vintage').addEventListener('#click', function() {
 	console.log("Style is now Old School");
-	video.classNone = 'video';
+	video.className = 'oldSchool';
 
-});
+})
 
 document.querySelector('#orig').addEventListener('#click', function() {
 	console.log('Style is back to the original');
 	video.className = 'Video';
-});
+})
 
