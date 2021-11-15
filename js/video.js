@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	document.querySelector('#volume').innerHTML = video.volume * 100 + "%"
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -17,7 +17,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 });
 
-document.querySelector('#slower').addEventListener("click", function() {
+document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video by 5%");
 	if (video.playbackRate > 1)
 		video.playbackRate = video.playbackRate - video.playbackRate * .0475;
@@ -27,13 +27,13 @@ document.querySelector('#slower').addEventListener("click", function() {
 
 });
 
-document.querySelector('#faster').addEventListener("click", function() {
+document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed up video by 5%");
 	if (video.playbackRate < 1)
 		video.playbackRate = video.playbackRate + video.playbackRate * .0527;
 	else
-		video.playbackrate = video.playbackrate + video.playbackRate * .05;
-	console.log('New Speed is ' + video.playbackrate);
+		video.playbackRate = video.playbackRate + video.playbackRate * .05;
+	console.log("New Speed is " + video.playbackRate);
 
 });
 
@@ -48,9 +48,9 @@ document.querySelector('#skip').addEventListener("click", function() {
 
 });
 
-document.querySelector('#mute').addEventListener('#click', function() {
+document.querySelector('#mute').addEventListener('click', function() {
 	if (video.muted != true) {
-		console.log('Video Muted')
+		console.log("Video Muted")
 		video.muted = true;
 		document.querySelector('#mute').innerHTML = 'Unmute';
 	}
@@ -63,19 +63,19 @@ document.querySelector('#mute').addEventListener('#click', function() {
 
 document.querySelector('#slider').addEventListener("click", function() {
 	console.log("Changed Volume");
-	var newVol = document.querySelector("slider").value / 100;
+	var newVol = document.querySelector("#slider").value / 100;
 	video.volume = newVol
 	console.log(newVol);
-	document.querySelector('#volume').innerHTML = newVol * 100 + '%'
+	document.querySelector('#volume').innerHTML = newVol * 100 + "%"
 })
 
-document.querySelector('#vintage').addEventListener('#click', function() {
+document.querySelector('#vintage').addEventListener('click', function() {
 	console.log("Style is now Old School");
 	video.className = 'oldSchool';
 
 })
 
-document.querySelector('#orig').addEventListener('#click', function() {
+document.querySelector('#orig').addEventListener('click', function() {
 	console.log('Style is back to the original');
 	video.className = 'Video';
 })
