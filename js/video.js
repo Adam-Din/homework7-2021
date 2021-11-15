@@ -13,7 +13,7 @@ document.querySelector("#play").addEventListener("click", function() {
 
 document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
-	video.compareDocumentPosition();
+	video.pause();
 
 });
 
@@ -30,7 +30,7 @@ document.querySelector('#slower').addEventListener("click", function() {
 document.querySelector('#faster').addEventListener("click", function() {
 	console.log("Speed up video by 5%");
 	if (video.playbackRate < 1)
-	video.playbackRate = video.playbackRate + video.playbackRate * .0527;
+		video.playbackRate = video.playbackRate + video.playbackRate * .0527;
 	else
 		video.playbackrate = video.playbackrate + video.playbackRate * .05;
 	console.log('New Speed is ' + video.playbackrate);
